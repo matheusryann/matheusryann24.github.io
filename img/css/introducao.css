@@ -1,0 +1,115 @@
+.container {
+  max-width: 1200px;
+  padding: 40px 30px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 100px;
+}
+
+.intro {
+  align-items: center;
+}
+
+.intro h1 {
+  font-size: 4.5rem;
+  line-height: 1.125;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.intro h1::before {
+  content: "";
+  display: block;
+  width: 130px;
+  height: 100px;
+  background: url("../img/detalhe.svg") no-repeat center;
+  position: absolute;
+  top: -15px;
+  left: -40px;
+  z-index: -1;
+}
+
+.intro p {
+  font-size: 1.5rem;
+  color: #525252;
+}
+
+.card-container {
+  position: relative;
+  width: 282px; /* Dimensão ajustada */
+  height: 323px; /* Dimensão ajustada */
+}
+
+.card-shadow {
+  position: absolute;
+  width: 282px; /* Dimensão ajustada */
+  height: 323px; /* Dimensão ajustada */
+  background-color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra nos retângulos */
+  border-radius: 8px;
+}
+
+.card-shadow.first {
+  z-index: 1;
+}
+
+.card-shadow.second {
+  z-index: 2;
+  top: 45px;
+  left: 45px;
+}
+
+.card {
+  position: relative;
+  width: 282px; /* Dimensão ajustada */
+  height: 323px; /* Dimensão ajustada */
+  background-color: white;
+  z-index: 10; /* Coloca a imagem na frente dos retângulos */
+  border-radius: 5px;
+  top: 90px;
+  left: 90px;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Garante que a imagem se ajuste ao card sem distorção */
+  border-radius: 5px;
+}
+
+@media (max-width: 1000px) {
+  .intro h1 {
+    font-size: 3rem;
+    margin-left: 60px;
+  }
+
+  .intro p {
+    margin-left: 60px;
+  }
+}
+
+@media (max-width: 800px) {
+  .intro {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  .intro h1 {
+    font-size: 2rem;
+  }
+
+  .intro h1::before {
+    width: 30px;
+    height: 10px;
+    left: 0px;
+  }
+  @media (max-width: 400px) {
+    .intro {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .card-container {
+    display: none;
+  }
+}
