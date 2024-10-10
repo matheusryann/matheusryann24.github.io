@@ -10,6 +10,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 100px;
   align-items: center;
+  justify-content: space-between;
 }
 
 .footer-texto {
@@ -47,10 +48,9 @@
   display: inline-block;
 }
 
-.footer-copy {
-  grid-column: 1 / -1;
-  font-size: 1.125rem;
-  color: #8f8f8f;
+.footer-right {
+  font-size: 1.05rem;
+  color: #555555;
 }
 
 @media (max-width: 800px) {
